@@ -68,8 +68,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD event, LPVOID lpReserved) {
 	switch (event) {
 		case DLL_PROCESS_ATTACH:
 			load();
-			break;
-		case DLL_THREAD_ATTACH:
+			break;		
 		case DLL_THREAD_DETACH:
 			break;
 		case DLL_PROCESS_DETACH:
