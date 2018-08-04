@@ -46,13 +46,15 @@ void loadConfig() {
 		}
 
 		file >> plugin.config;
-		file.close();
+		
 
 		plugin.interceptGlobalChat = plugin.config.value("InterceptGlobalChat", true);
 		plugin.interceptTribeChat = plugin.config.value("InterceptTribeChat", true);
 		plugin.interceptAllianceChat = plugin.config.value("InterceptAllianceChat", true);
 		plugin.interceptLocalChat = plugin.config.value("InterceptLocalChat", true);
 		plugin.localChatDistance = plugin.config.value("LocalChatDistance", 1000);
+		
+		file.close();
 	}
 	catch (const std::exception& error) {
 		Log::GetLog()->error(error.what());
